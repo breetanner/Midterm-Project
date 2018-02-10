@@ -33,8 +33,3 @@ What we Need:
     - items (make item, remove item, update category total)
     - Categories (make cat, update cat)
     - Budget (total budget, remaining budget, update budget)
-=======
-NOTES
-
-This is our midterm project
->>>>>>> 47e7308db09fc844857a201879414d9ade234be6
