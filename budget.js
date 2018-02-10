@@ -24,7 +24,9 @@ class Budget {
   totalRemaining() {
     var percentage = ((this.total() / this.totalPrice) * 100);
     console.log(percentage);
-    if(percentage <= 80) {
+    if(percentage >= 100) {
+      return "STOP";
+    }else if(percentage <= 80) {
       console.log(percentage);
       return "#green";
     }else if(percentage <= 60) {
