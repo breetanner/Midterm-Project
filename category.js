@@ -1,6 +1,3 @@
-
-
-
 class Category {
     constructor(name) {
         this.name = name;
@@ -8,12 +5,13 @@ class Category {
     }
 
     addItem(name, price) {
-        this.item = new Item(name, price);
-        this.items.push(this.item);
+        var item = new Item(name, price);
+        this.items.push(item);
         console.log(this.items);
+        return item;
     }
 
-    catTotal() {
+    total() {
         var sum = 0;
         this.items.forEach(item => {
         sum = sum + item.price;
