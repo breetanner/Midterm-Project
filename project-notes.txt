@@ -1,1 +1,3 @@
 NOTES
+
+This is our midterm project
