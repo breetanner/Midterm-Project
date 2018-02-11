@@ -1,1 +1,35 @@
-NOTES
+<<<<<<< HEAD
+Budget Buddy:
+
+What is it?
+    - App that allows users to input entire weekly Budget
+    - Budget updates when users input purchases
+
+State Representation:
+    - total weekly budget (and display)
+    - Categories for users to choose from (Entertainment, Food, Clothing, Bills)
+    - Set of items that updates total budget accordingly 
+    - item information
+    - total spent within a given category
+    - budget exceeded?
+
+State Change:
+    - Enter total budget
+    - Total budget number decrease depending on user item input
+    - Item is listed within category
+    - Update total spent within category
+    - Redisplay budget information
+
+Maybe Extra Stuff (If Possible):
+    - weekly, monthly, and yearly budget displays
+    - remove item option
+    - add category button
+
+UX Thoughts (States):
+    - enter total budget before seeing anything
+    - display budget x/total 
+
+What we Need:
+    - items (make item, remove item, update category total)
+    - Categories (make cat, update cat)
+    - Budget (total budget, remaining budget, update budget)
