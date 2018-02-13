@@ -1,6 +1,6 @@
 class Category {
-    constructor(name) {
-        this.name = name;
+    constructor(categoryName) {
+        this.name = categoryName;
         this.items = [];
     }
 
@@ -28,10 +28,6 @@ class Category {
       });
       return sum;
     }
-
-
-
-
 
     // addItems() {
     //     for(var i = 0; i < this.items.length; i++) {

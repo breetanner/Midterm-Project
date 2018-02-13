@@ -9,11 +9,12 @@
 // cat2.addItem("food", 500);
 // cat2.addItem("whiskey", 1000);
 
+
 var budget;
 var category;
 var categoryName;
 
-function createBudget() { // function run on set budget button click, TEMP for testing type value into input box and type createBudget function into concole
+function createBudget() { // function run on 'set budget' button click, TEMP for testing type value into input box and type createBudget function into concole
   var userBudgetInput = document.getElementById('budget-input').value;
   budget = new Budget(userBudgetInput);
 }

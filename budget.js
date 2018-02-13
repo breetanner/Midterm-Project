@@ -1,5 +1,5 @@
 class Budget {
-  constructor(totalPrice) {
+  constructor(totalPrice) { // whats totalPrice doing here?
     this.totalPrice = totalPrice;
     this.categories = [];
   }
@@ -12,8 +12,8 @@ class Budget {
   //   return category;
   // }
 
-  addCategory(category) { // Changed to pass in cateogryNamw variable
-    var categoryName = document.getElementById('category-name-input').value; // TEMP for testing type value into input box and type budget.addCategory function into console, then type a new category and run budget.addCategory again, successfully adds to array!!!
+  addCategory(categoryName) { // add feature that they cannot add category if field empty
+    categoryName = document.getElementById('category-name-input').value; // TEMP for testing type category name into input box and type budget.addCategory function into console, then type a new category and run budget.addCategory again, successfully adds to array!!!
     category = new Category(categoryName);
     this.categories.push(category);
     console.log(this.categories);
@@ -45,4 +45,57 @@ class Budget {
       return "#red";
     }
   }
+  //
+  // removeCategory(categoryName) { // cannot seem to get this to work
+  //   var categoryName = category.name;
+  //   this.categories.filter(item => item !== categoryName)
+  //   console.log("Hello");
+  // }
+
+  // removeCategory() {
+  //   var index = budget.categories.indexOf(this.category);
+  //   budget.categories.filter(item => item !== index)
+  //   console.log("Removed Item!");
+  // }
+
+  // removeCategory() {
+  //   var index = budget.categories.indexOf(this.category);
+  //   var newArray = budget.categories.filter(item => item !== index);
+  //   return newArray;
+  //   console.log(newArray);
+  // }
+  //
+  // removeCategory(categoryName) {
+  //   var i = category.name;
+  //   var items =
+  //   newArray = budget.categories.filter(item => item !== index);
+  //   return newArray;
+  //   console.log(newArray);
+  // }
+
+  // removeCategory() {
+  //   var index = budget.categories.indexOf(this.category);
+  //   var thisIndex = budget.categories[index];
+  //   var newArray = budget.categories.filter(index => index !== thisIndex);
+  //   return newArray;
+  //   console.log(newArray);
+  // }
+
+  removeCategory() {
+  var index = budget.categories.indexOf(this.category);
+  for(var i = budget.categories.length - 1; i >= 0; i--) {
+    if(i === index) {
+       budget.categories.splice(i, 1);
+    }
+  }
 }
+
+
+// budget.categories.indexOf(this.category) // this returns the index!! WOOP
+// budget.categories[1] accesses specific array item
+// category.name // this returns the category name
+}
+
+// variable for the array
+// var arr = budget.categories
+// var thisIndex = budget.categories.indexOf(this.category)
