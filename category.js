@@ -4,12 +4,17 @@ class Category {
         this.items = [];
     }
 
-    addItem(name, price) {
-        var item = new Item(name, price);
-        this.items.push(item);
-        console.log(this.items);
-        return item;
-    }
+    // addItem(name, price) {
+    //     var item = new Item(name, price);
+    //     this.items.push(item);
+    //     console.log(this.items);
+    //     return item;
+    // }
+
+    addItem() {
+        var itemDesc = document.getElementById('item-description').value
+        var itemPrice = document.getElementById('item-price').value
+        var item = new Item(itemDesc, itemPrice);
 
     total() {
         var sum = 0;
@@ -19,10 +24,6 @@ class Category {
       });
       return sum;
     }
-
-
-
-
 
     // addItems() {
     //     for(var i = 0; i < this.items.length; i++) {
