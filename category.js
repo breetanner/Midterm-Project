@@ -1,6 +1,6 @@
 class Category {
-    constructor(categoryName) {
-        this.name = categoryName;
+    constructor(name) {
+        this.name = name;
         this.items = [];
     }
 

@@ -1,5 +1,5 @@
 class Budget {
-  constructor(totalPrice) { // whats totalPrice doing here?
+  constructor(totalPrice) {
     this.totalPrice = totalPrice;
     this.categories = [];
   }
@@ -12,13 +12,13 @@ class Budget {
   //   return category;
   // }
 
-  addCategory(categoryName) { // add feature that they cannot add category if field empty
-    categoryName = document.getElementById('category-name-input').value; // TEMP for testing type category name into input box and type budget.addCategory function into console, then type a new category and run budget.addCategory again, successfully adds to array!!!
+  addCategory(categoryName) { // add feature so that user cannot add category if field box is empty
+    categoryName = document.getElementById('category-name-input').value;
     category = new Category(categoryName);
     this.categories.push(category);
     console.log(this.categories);
     // console.log(category);
-    // return category;
+    return category;
   }
 
   total() { // this is adding the sums to the end of each other like a string (i.e. I had two items one at 50 and one at 10 and it logged 050100)
@@ -45,12 +45,12 @@ class Budget {
       return "#red";
     }
   }
-  //
-  // removeCategory(categoryName) { // cannot seem to get this to work
-  //   var categoryName = category.name;
-  //   this.categories.filter(item => item !== categoryName)
-  //   console.log("Hello");
-  // }
+
+  removeCategory(categoryName) { // cannot seem to get this to work
+    var categoryName = category.name;
+    this.categories.filter(item => item !== categoryName)
+    console.log("Hello");
+  }
 
   // removeCategory() {
   //   var index = budget.categories.indexOf(this.category);
@@ -64,14 +64,6 @@ class Budget {
   //   return newArray;
   //   console.log(newArray);
   // }
-  //
-  // removeCategory(categoryName) {
-  //   var i = category.name;
-  //   var items =
-  //   newArray = budget.categories.filter(item => item !== index);
-  //   return newArray;
-  //   console.log(newArray);
-  // }
 
   // removeCategory() {
   //   var index = budget.categories.indexOf(this.category);
@@ -81,21 +73,26 @@ class Budget {
   //   console.log(newArray);
   // }
 
-  removeCategory() {
-  var index = budget.categories.indexOf(this.category);
-  for(var i = budget.categories.length - 1; i >= 0; i--) {
-    if(i === index) {
-       budget.categories.splice(i, 1);
-    }
-  }
+  // removeCategory() {
+  // var index = budget.categories.indexOf(this.category);
+  // for(var i = budget.categories.length - 1; i >= 0; i--) {
+  //   if(i === index) {
+  //      budget.categories.splice(i, 1);
+  //   }
+  // }
+
+  // removeCategory() {
+  //   var arr = budget.categories
+  //   var cat = category.name
+  //   var thisCat = this.name
+  //   arr = arr.filter(function() { // does not work
+  //       return cat !== thisCat
+  //   });
+  //   console.log(arr)
+  // }
 }
 
-
-// budget.categories.indexOf(this.category) // this returns the index!! WOOP
-// budget.categories[1] accesses specific array item
-// category.name // this returns the category name
-}
-
-// variable for the array
-// var arr = budget.categories
-// var thisIndex = budget.categories.indexOf(this.category)
+// ----------- In Console ------------------
+// budget.categories.indexOf(this.category) >>>>>> this returns the index of category
+// budget.categories[1] >>>>>>> accesses specific array item
+// category.name >>>>>> this returns the category nameca
