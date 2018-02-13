@@ -5,26 +5,14 @@ class Budget {
   }
 
   addCategory(categoryName) { // add feature so that user cannot add category if field box is empty
-    categoryName = document.getElementById('category-name-input').value;
+    // categoryName = document.getElementById('category-name-input').value;
     category = new Category(categoryName);
     this.categories.push(category);
     console.log(this.categories);
     // console.log(category);
     return category;
   }
-
-  total() { // this is adding the sums to the end of each other like a string (i.e. I had two items one at 50 and one at 10 and it logged 050100)
-    var sum = 0;
-    this.categories.forEach(category => {
-      sum = (sum + category.total());
       
-  addCategory(name) {
-    var category = new Category(name);
-    this.categories.push(category);
-    console.log(this.categories);
-    console.log(category);
-    return category;
-  }
 
   total() {
     var sum = 0;
@@ -51,9 +39,14 @@ class Budget {
     }
   }
 
-  removeCategory(categoryName) { // cannot seem to get this to work
+  removeCategory(category) { // cannot seem to get this to work
+    debugger;
     var categoryName = category.name;
-    this.categories.filter(item => item !== categoryName)
+    // var arrayIndex = this.categories.indexOf(this.category);
+    var result = this.categories.filter(item => item !== categoryName)
+    if(result === categoryName) {
+      this.categories.splice(0, 1, categoryName);
+    }
     console.log("Hello");
   }
 
@@ -101,5 +94,5 @@ class Budget {
 // budget.categories.indexOf(this.category) >>>>>> this returns the index of category
 // budget.categories[1] >>>>>>> accesses specific array item
 // category.name >>>>>> this returns the category nameca
-}
+
 

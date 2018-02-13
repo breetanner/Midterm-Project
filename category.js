@@ -4,17 +4,14 @@ class Category {
         this.items = [];
     }
 
-    // addItem(name, price) {
-    //     var item = new Item(name, price);
-    //     this.items.push(item);
-    //     console.log(this.items);
-    //     return item;
-    // }
-
-    addItem() {
-        var itemDesc = document.getElementById('item-description').value
-        var itemPrice = document.getElementById('item-price').value
-        var item = new Item(itemDesc, itemPrice);
+    addItem(name, price) {
+        // var itemDesc = document.getElementById('item-description').value;
+        // var itemPrice = document.getElementById('item-price').value;
+        var item = new Item(name, price);
+        this.items.push(item);
+        console.log(this.items);
+        return item;
+    }
 
     total() {
         var sum = 0;
