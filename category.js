@@ -15,10 +15,6 @@ class Category {
         var itemDesc = document.getElementById('item-description').value
         var itemPrice = document.getElementById('item-price').value
         var item = new Item(itemDesc, itemPrice);
-        this.items.push(item);
-        console.log(this.items);
-        return item;
-    }
 
     total() {
         var sum = 0;

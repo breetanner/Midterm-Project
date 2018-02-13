@@ -4,14 +4,6 @@ class Budget {
     this.categories = [];
   }
 
-  // addCategory(name) { // What is name doing here?
-  //   var category = new Category(name);
-  //   this.categories.push(category);
-  //   console.log(this.categories);
-  //   console.log(category);
-  //   return category;
-  // }
-
   addCategory(categoryName) { // add feature so that user cannot add category if field box is empty
     categoryName = document.getElementById('category-name-input').value;
     category = new Category(categoryName);
@@ -25,6 +17,19 @@ class Budget {
     var sum = 0;
     this.categories.forEach(category => {
       sum = (sum + category.total());
+      
+  addCategory(name) {
+    var category = new Category(name);
+    this.categories.push(category);
+    console.log(this.categories);
+    console.log(category);
+    return category;
+  }
+
+  total() {
+    var sum = 0;
+    this.categories.forEach(category => {
+      sum = sum + category.total();
       console.log(sum);
     });
     return sum;
@@ -96,3 +101,5 @@ class Budget {
 // budget.categories.indexOf(this.category) >>>>>> this returns the index of category
 // budget.categories[1] >>>>>>> accesses specific array item
 // category.name >>>>>> this returns the category nameca
+}
+
