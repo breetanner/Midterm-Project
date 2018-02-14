@@ -1,11 +1,11 @@
 class Budget {
-  constructor(totalPrice) {
-    this.totalPrice = totalPrice;
+  constructor(totalBudget) {
+    this.totalBudget = totalBudget;
     this.categories = [];
   }
 
   addCategory(categoryName) { // add feature so that user cannot add category if field box is empty
-    categoryName = document.getElementById('category-name-input').value;
+    //categoryName = document.getElementById('category-name-input').value;
     const category = new Category(categoryName);
     this.categories.push(category);
     return category;
@@ -22,8 +22,10 @@ class Budget {
   }
 
   totalRemaining() {
-    var percentage = ((this.total() / this.totalPrice) * 100);
+    var totalRemain = this.totalBudget - this.total();
+    var percentage = ((this.total() / this.totalBudget) * 100);
     console.log(percentage);
+    console.log(totalRemain);
     if(percentage >= 100) {
       return "STOP";
     }else if(percentage <= 80) {
@@ -40,4 +42,40 @@ class Budget {
   removeCategory(category) { // cannot seem to get this to work
     this.categories = this.categories.filter(item => item !== category);
   }
+
+  eachCatetory() {
+    this.categories = this.categories
+  }
+
+
+
+  updateCategorySlider() {
+    document.getElementById("entertainment").style.width = (this.entertainmentPercent()).toString() + "%";
+    document.getElementById("food").style.width = (this.foodPercent()).toString() + "%";
+    //document.getElementById("clothing").style.width = (this.clothingPercent()).toString() + "%";
+    //document.getElementById("bills").style.width = (this.billsPercent()).toString() + "%";
+  }
+
+  entertainmentPercent() {
+    return (350/this.totalBudget)/.01;
+    //return (this.total()/this.totalBudget)/.01;
+  }
+
+  foodPercent() {
+    return (250/this.totalBudget)/.01;
+
+  }
+
+  /*  clothingPercent() {
+  return (this.total()/this.totalBudget)/.01;
+
+}
+
+billsPercent() {
+return (this.total()/this.totalBudget)/.01;
+
+} */
+
+
+
 }

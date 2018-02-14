@@ -14,8 +14,10 @@
     justify-content: left;
     height: 20px;
     width: 300px;
+	background-color: grey;
     border-radius: 10px;
-    padding: 20px;
+    padding: 0px;
+	z-index: 10px;
 }
 
 .add-element {
@@ -28,29 +30,29 @@
 }
 
 #entertainment {
-  position: relative;
   width: 25%;
   background-color: red;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  /* border: 1px solid black; */
 }
 
 #food {
-  position: relative;
   width: 25%;
   background-color: blue;
+  /* border: 1px solid black; */
 }
 
 #clothing {
-  position: relative;
   width: 25%;
   background-color: yellow;
+ /*  border: 1px solid black; */
 }
 
 #bills {
-  position: relative;
   width: 25%;
   background-color: green;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  /* border: 1px solid black; */
 }
