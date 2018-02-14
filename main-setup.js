@@ -17,4 +17,3 @@ var cat2 = budget.addCategory("clothing", 40);
 cat1.addItem("rent", 400);
 cat2.addItem("food", 500);
 cat2.addItem("cookies", 100);
-
