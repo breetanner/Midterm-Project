@@ -13,38 +13,58 @@
 </head>
 <body>
   <header>
-    <h1 id="budget-counter">Weekly Budget:</h1>
-    <p class="total">Total Spent:</p>
+    <h1>budget buddy</h1>
+  </header>
+
+<!-- show first -->
+  <div class="modal" id="budget-modal">
+    <label>Budget:
+      <input type="text" id="budget-input">
+    </label><br/><br/>
+  </div>
+
+<!-- hide this until user puts in budget -->
+  <div class ="main">
+    <h2 id="budget-counter">Total Budget $0</h2> <!-- likely will have to put this copy in in javascript -->
+    <h4 id="total-spent-counter">Spent: 0/0</h4>
     <div id="budget-bar">
       <div id="entertainment"></div>
       <div id="food"></div>
       <div id="clothing"></div>
       <div id="bills"></div>
     </div>
-  </header>
-<!--   <section class="add-element">
-    <div class="item">
-      <input type="text" placeholder="Item"></input>
+
+    <div class="add-item-container">
+      <h3>Add Spend Money</h3>
+      <!-- <div class="add-item"> not yet sure if we want section or div for this-->
+      <input type="text" id="item-description" placeholder="Item Description"></input>
+      <input type="text" id="item-price" placeholder="$ Price"</input>
+      <div class="dropdown">
+        <div class="category-dropdown">
+          <select>
+            <option value="cat1">Cat1</option>
+            <option value="cat2">Cat2</option>
+            <option value="cat3">Cat3</option>
+            <option value="cat4">Cat4</option>
+          </select>
+        </div>
+      </div>
+      <button id="addItemButton">Add Item</button>
     </div>
-    <div class="price">
-        <input type="text" placeholder="$ Price"></input>
-    <div class="category-dropdown">
-        <p>Category</p>
+
+    <div class id="categories-container">
+      <h3>Categories</h3>
     </div>
-  </section>
- <!-- Added these for testing -->
-  <label>Budget:
-    <input type="text" id="budget-input">
-  </label><br/><br/>
-  <label>Category:
-    <input type="text" id="category-name-input" value="New" >
-  </label><br/><br/>
-  <label>Item Description:
-    <input type="text" id="item-description">
-  </label>
-  <label>Item Price:
-    <input type="text" id="item-price">
-  </label>
+  </div>
+
+
+ <!-- Hide this until add category button pressed -->
+
+ <div class "modal" id="add-category">
+    <label>Category:
+      <input type="text" id="category-name-input">
+    </label><br/><br/>
+  </div>
 
 </body>
 </html>
