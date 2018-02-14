@@ -1,0 +1,27 @@
+#budget-counter {
+    display: flex;
+    justify-content: center;
+}
+
+.total {
+    display: flex;
+    justify-content: center;
+}
+
+#budget-bar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.add-element {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    margin: 20px;
+}
