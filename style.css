@@ -11,10 +11,11 @@
 #budget-bar {
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-    height: 10px;
+    justify-content: left;
+    height: 20px;
     width: 300px;
-    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .add-element {
@@ -24,4 +25,32 @@
 
 .item {
     margin: 20px;
+}
+
+#entertainment {
+  position: relative;
+  width: 25%;
+  background-color: red;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#food {
+  position: relative;
+  width: 25%;
+  background-color: blue;
+}
+
+#clothing {
+  position: relative;
+  width: 25%;
+  background-color: yellow;
+}
+
+#bills {
+  position: relative;
+  width: 25%;
+  background-color: green;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
