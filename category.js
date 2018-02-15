@@ -21,6 +21,12 @@ class Category {
     });
     return sum;
   }
+
+  render() {
+    console.log(category.name);
+    $("#cat1").innerText = category.name;
+  }
+
 }
 
 // NEED TO USE SOME OF THIS FOR MATH DOM MANIPULATION ------

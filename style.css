@@ -13,39 +13,51 @@
 #budget-bar {
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     height: 20px;
+    width: 300px;
+	background-color: grey;
+    border-radius: 10px;
+    padding: 0px;
+	z-index: 10px;
+}
+
+.add-element {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    margin: 20px;
     width: 100%;
     border-radius: 10px;
     color: #F4F4F4;
 }
 
 #entertainment {
-  position: relative;
   width: 25%;
   background-color: #2D45FF;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  /* border: 1px solid black; */
 }
 
 #food {
-  position: relative;
   width: 25%;
   background-color: #FF15FD;
 }
 
 #clothing {
-  position: relative;
   width: 25%;
   background-color: #53DDFF;
 }
 
 #bills {
-  position: relative;
   width: 25%;
   background-color: #F6D073;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  /* border: 1px solid black; */
 }
 
 /* Bree Style Start */
@@ -70,7 +82,7 @@ h2 {
 
 h3 {
   font-family: sans-serif;
-  text-align: right;
+  text-align: left;
   color: #777777;
   line-height: 10px;
 }
@@ -141,6 +153,13 @@ button {
   background-color: #79F463;
   font-size: 15px;
   font-weight: 600;
+}
+
+#cat1 {
+  width: 200px;
+  height: 25px;
+  border: 1px solid black;
+
 }
 
 .dropdown {
