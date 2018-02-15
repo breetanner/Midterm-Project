@@ -35,15 +35,6 @@ function addCategories(categoryName) {
   return budget;
 }
 
-// This is kinda a repeat function
-
-// function addItem(userBudgetInput) {
-//   var itemDesc = document.getElementById('item-description').value;
-//   var itemPrice = document.getElementById('item-price').value;
-//   totalSpent = (totalSpent + itemPrice); // still returning as a string // change this to a smaller function called updateTotal()
-//   document.getElementById("total-spent-counter").innerText = "Spent: " + totalSpent + " / " + userBudgetInput;
-// }
-
 function checkDropdown() {
   debugger;
   const catInput = document.getElementById('category-dropdown').value;
@@ -59,16 +50,3 @@ function checkDropdown() {
     console.log("Please select a category.")
   }
 }
-
-
-
-
-// var category = new Category("test", 200);
-//
-// var budget = new Budget(1000);
-//
-
-//
-// cat1.addItem("rent", 400);
-// cat2.addItem("food", 500);
-// cat2.addItem("cookies", 100);

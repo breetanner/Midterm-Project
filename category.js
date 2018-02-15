@@ -23,8 +23,7 @@ class Category {
   }
 }
 
-
-// budget.categories[1] // accesses entertainment array
-// budget.categories[1].addItem() // adds Item to array
-
-// maybe make a loop that asks when the user drop down = cat1
+// NEED TO USE SOME OF THIS FOR MATH DOM MANIPULATION ------
+//   totalSpent = (totalSpent + itemPrice); // still returning as a string // change this to a smaller function called updateTotal()
+//   document.getElementById("total-spent-counter").innerText = "Spent: " + totalSpent + " / " + userBudgetInput;
+// }

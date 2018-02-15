@@ -4,7 +4,8 @@ class Budget {
     this.categories = [];
   }
 
-  addCategory(categoryName) { // add feature so that user cannot add category if field box is empty
+  addCategory(categoryName) {
+    // EXTRA ---
     // don't need this now that we are not having users make categories
     // categoryName = document.getElementById('category-name-input').value;
     const category = new Category(categoryName);
@@ -37,6 +38,7 @@ class Budget {
     }
   }
 
+// EXTRA ---
   removeCategory(category) { // cannot seem to get this to work
     this.categories = this.categories.filter(item => item !== category);
   }
