@@ -37,24 +37,21 @@
 
     <div class="add-item-container">
       <h3>Add Spend Money</h3>
-      <!-- <div class="add-item"> not yet sure if we want section or div for this-->
       <input type="text" id="item-description" placeholder="Item Description"></input>
       <input type="text" id="item-price" placeholder="$ Price"</input>
       <div class="dropdown">
-        <div class="category-dropdown">
-          <select>
-            <option value="cat1">Cat1</option>
-            <option value="cat2">Cat2</option>
-            <option value="cat3">Cat3</option>
-            <option value="cat4">Cat4</option>
-          </select>
-        </div>
+        <select id="category-dropdown">
+          <option value="cat1">Clothing</option>
+          <option value="cat2">Entertainment</option>
+          <option value="cat3">Bills</option>
+          <option value="cat4">Food</option>
+        </select>
       </div>
       <!-- TEMP -->
-      <button id="item-button" onclick="addItem()">Add Item</button>
+      <button id="item-button" onclick="checkDropdown()">Add Item</button>
     </div>
 
-    <!-- dont need this -->
+    <!-- EXTRA -->
     <!-- <div class id="categories-container">
       <h3>Categories</h3>
     </div>
@@ -63,11 +60,5 @@
         <button id="cat-button">Add Category</button>
     </div> -->
   </div>
-
-
- <!-- Hide this until add category button pressed -->
-
-
-
 </body>
 </html>

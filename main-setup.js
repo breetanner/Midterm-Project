@@ -3,8 +3,8 @@
 var budget;
 var category;
 var categoryName;
-var totalSpent = 0;
-var userBudgetInput;
+var totalSpent = 0; // probably dont need this
+// var userBudgetInput;
 
 window.addEventListener("load", () => {
   document.getElementById("budget-modal").style.display = "block";
@@ -13,8 +13,8 @@ window.addEventListener("load", () => {
   });
 });
 
-function createBudget(userBudgetInput) {
-    var userBudgetInput = document.getElementById('budget-input').value;
+function createBudget() {
+    const userBudgetInput = document.getElementById('budget-input').value;
     budget = new Budget(userBudgetInput);
     document.getElementById("budget-counter").innerText = "Total Budget: $" + userBudgetInput;
     document.getElementById("total-spent-counter").innerText = "Spent: " + totalSpent + " / " + userBudgetInput; // what if the user puts in a $?
@@ -35,13 +35,33 @@ function addCategories(categoryName) {
   return budget;
 }
 
+// This is kinda a repeat function
 
-function addItem(userBudgetInput) {
-  var itemDesc = document.getElementById('item-description').value;
-  var itemPrice = document.getElementById('item-price').value;
-  totalSpent = (totalSpent + itemPrice); // still returning as a string
-  document.getElementById("total-spent-counter").innerText = "Spent: " + totalSpent + " / " + userBudgetInput;
+// function addItem(userBudgetInput) {
+//   var itemDesc = document.getElementById('item-description').value;
+//   var itemPrice = document.getElementById('item-price').value;
+//   totalSpent = (totalSpent + itemPrice); // still returning as a string // change this to a smaller function called updateTotal()
+//   document.getElementById("total-spent-counter").innerText = "Spent: " + totalSpent + " / " + userBudgetInput;
+// }
+
+function checkDropdown() {
+  debugger;
+  const catInput = document.getElementById('category-dropdown').value;
+  if (catInput === 'cat1') {
+    budget.categories[0].addItem();
+  } else if (catInput === 'cat2') {
+    budget.categories[1].addItem();
+  } else if (catInput === 'cat3') {
+    budget.categories[2].addItem();
+  } else if (catInput === 'cat4') {
+    budget.categories[3].addItem();
+  } else {
+    console.log("Please select a category.")
+  }
 }
+
+
+
 
 // var category = new Category("test", 200);
 //
