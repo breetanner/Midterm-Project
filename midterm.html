@@ -16,17 +16,18 @@
     <h1>budget buddy</h1>
   </header>
 
-<!-- show first -->
+<!-- working on making this be hidden and shown -->
   <div class="modal" id="budget-modal">
-    <label>Budget:
-      <input type="text" id="budget-input">
-    </label><br/><br/>
+      <label><h2>Budget:</h2>
+        <input type="text" id="budget-input">
+        <button id="budget-button">Add Budget</button>
+      </label><br/><br/>
+    </div>
   </div>
 
-<!-- hide this until user puts in budget -->
   <div class ="main">
-    <h2 id="budget-counter">Total Budget $0</h2> <!-- likely will have to put this copy in in javascript -->
-    <h4 id="total-spent-counter">Spent: 0/0</h4>
+    <h2><div id="budget-counter">Total Budget:</div></h2>
+    <h4><div id="total-spent-counter">Spent: 0/0</div></h4>
     <div id="budget-bar">
       <div id="entertainment"></div>
       <div id="food"></div>
@@ -49,22 +50,24 @@
           </select>
         </div>
       </div>
-      <button id="addItemButton">Add Item</button>
+      <!-- TEMP -->
+      <button id="item-button" onclick="addItem()">Add Item</button>
     </div>
 
-    <div class id="categories-container">
+    <!-- dont need this -->
+    <!-- <div class id="categories-container">
       <h3>Categories</h3>
     </div>
+    <div class id="add-category">
+        <input type="text" id="category-name-input">
+        <button id="cat-button">Add Category</button>
+    </div> -->
   </div>
 
 
  <!-- Hide this until add category button pressed -->
 
- <div class "modal" id="add-category">
-    <label>Category:
-      <input type="text" id="category-name-input">
-    </label><br/><br/>
-  </div>
+
 
 </body>
 </html>

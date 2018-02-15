@@ -158,10 +158,23 @@ button {
   align-items: center;
 }
 
+/* make this so that its centered */
+.modal {
+  display: block;
+  position: absolute;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 175px;
+  z-index: 1;
+  padding: 20px;
+}
+
 #budget-modal {
   display: none;
+  bottom: 0px;
 }
 
 #add-category {
-  display: none;
+  display: block;
 }

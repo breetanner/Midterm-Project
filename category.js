@@ -22,3 +22,8 @@ class Category {
     return sum;
   }
 }
+
+
+budget.categories[1] // accesses entertainment array
+
+// maybe make a loop that asks when the user drop down = cat1

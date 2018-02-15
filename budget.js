@@ -5,12 +5,12 @@ class Budget {
   }
 
   addCategory(categoryName) { // add feature so that user cannot add category if field box is empty
-    categoryName = document.getElementById('category-name-input').value;
+    // don't need this now that we are not having users make categories
+    // categoryName = document.getElementById('category-name-input').value;
     const category = new Category(categoryName);
     this.categories.push(category);
     return category;
   }
-
 
   total() {
     var sum = 0;
