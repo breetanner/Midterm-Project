@@ -10,6 +10,7 @@ class Category {
     var item = new Item(itemDesc, itemPrice);
     this.items.push(item);
     console.log(this.items);
+    addToCategory();
     return item;
   }
 

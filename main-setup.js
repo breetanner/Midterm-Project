@@ -36,8 +36,7 @@ function addCategories(categoryName) {
 }
 
 function checkDropdown() {
-  debugger;
-  const catInput = document.getElementById('category-dropdown').value;
+  var catInput = document.getElementById('category-dropdown').value;
   if (catInput === 'cat1') {
     budget.categories[0].addItem();
   } else if (catInput === 'cat2') {
@@ -47,6 +46,54 @@ function checkDropdown() {
   } else if (catInput === 'cat4') {
     budget.categories[3].addItem();
   } else {
-    console.log("Please select a category.")
+    console.log("Please select a category.") // make this a notification
   }
 }
+
+
+function addToCategory(catInput) {
+  var catInput = document.getElementById('category-dropdown').value;
+  var itemDesc = document.getElementById('item-description').value;
+  var itemPrice = document.getElementById('item-price').value;
+  var itemDiv = document.createElement("div");
+  if (catInput === 'cat1') {
+    itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
+    document.getElementById("cat1").appendChild(itemDiv);
+  } else if (catInput === 'cat2') {
+    itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
+    document.getElementById("cat2").appendChild(itemDiv);
+  } else if (catInput === 'cat3') {
+    itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
+    document.getElementById("cat3").appendChild(itemDiv);
+  } else if (catInput === 'cat4') {
+    itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
+    document.getElementById("cat4").appendChild(itemDiv);
+  } else {
+    console.log("ERROR")
+  }
+
+  // itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
+  // document.getElementById("cat1").appendChild(itemDiv);
+}
+
+// line.innerHTML = "<strong>" + name + ": </strong>"
+
+// var li = document.createElement("li")
+
+// Otherwise use these
+// var itemDesc = document.getElementById('item-description').value;
+// var itemPrice = document.getElementById('item-price').value;
+
+// REFERENCES
+
+// //Defining a listener for our button, specifically, an onclick handler
+// document.getElementById("add").onclick = function() {
+//     //First things first, we need our text:
+//     var text = document.getElementById("idea").value; //.value gets input values
+//
+//     //Now construct a quick list element
+//     var li = "<li>" + text + "</li>";
+//
+//     //Now use appendChild and add it to the list!
+//     document.getElementById("list").appendChild(li);
+// }
