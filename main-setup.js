@@ -51,7 +51,13 @@ function addItems() {
   var itemDesc = document.getElementById('item-description').value;
   var itemPrice = parseFloat(document.getElementById('item-price').value);
   var category = checkDropdown();
-  category.addItem(itemDesc, itemPrice);  
+  category.addItem(itemDesc, itemPrice);
+  spentUpdate();
+  updateCategorySlider();
+}
+
+function spentUpdate() {
+  document.getElementById("total-spent-counter").innerText = "Spent: " + budget.total() + " / " + budget.totalBudget;
 }
 
 function addToCategory(catInput) {
@@ -74,30 +80,11 @@ function addToCategory(catInput) {
   } else {
     console.log("ERROR")
   }
-
-  // itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
-  // document.getElementById("cat1").appendChild(itemDiv);
 }
 
-// line.innerHTML = "<strong>" + name + ": </strong>"
 
-// var li = document.createElement("li")
+updateCategorySlider() {
+  var budgetBar = document.getElementById("budget-bar";)
+  budgetBar.style.width = ((totaSpent/budget.totalBudget)/.01) + "%";
 
-// Otherwise use these
-// var itemDesc = document.getElementById('item-description').value;
-// var itemPrice = document.getElementById('item-price').value;
-
-// REFERENCES
-
-// //Defining a listener for our button, specifically, an onclick handler
-// document.getElementById("add").onclick = function() {
-//     //First things first, we need our text:
-//     var text = document.getElementById("idea").value; //.value gets input values
-//
-//     //Now construct a quick list element
-//     var li = "<li>" + text + "</li>";
-//
-//     //Now use appendChild and add it to the list!
-//     document.getElementById("list").appendChild(li);
-// }
-
+}

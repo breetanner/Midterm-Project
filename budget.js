@@ -38,27 +38,4 @@ class Budget {
       return "#red";
     }
   }
-
-// EXTRA ---
-  removeCategory(category) { // cannot seem to get this to work
-    this.categories = this.categories.filter(item => item !== category);
-  }
-
-  updateCategorySlider() {
-    this.style.width = ((this.total()/this.totalBudget)/.01) + "%";
-
-  }
-
-  /*  clothingPercent() {
-  return (this.total()/this.totalBudget)/.01;
-
-}
-
-billsPercent() {
-return (this.total()/this.totalBudget)/.01;
-
-} */
-
-
-
 }
