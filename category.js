@@ -5,9 +5,7 @@ class Category {
   }
 
   addItem(name, price) {
-    var itemDesc = document.getElementById('item-description').value;
-    var itemPrice = document.getElementById('item-price').value;
-    var item = new Item(itemDesc, itemPrice);
+    var item = new Item(name, price);
     this.items.push(item);
     console.log(this.items);
     return item;
@@ -16,7 +14,7 @@ class Category {
   total() {
     var sum = 0;
     this.items.forEach(item => {
-      sum === sum + item.price;
+      sum = sum + item.price;
       console.log(sum);
     });
     return sum;
@@ -27,6 +25,10 @@ class Category {
     $("#cat1").innerText = category.name;
   }
 
+  updateClothingSlider() {
+    this.style.width = ((this.total()/this.totalBudget)/.01) + "%";
+  }
+  
 }
 
 // NEED TO USE SOME OF THIS FOR MATH DOM MANIPULATION ------
