@@ -26,15 +26,9 @@
     </div>
   </div>
 
-  <div class ="main">
+  <div class="main">
     <h2><div id="budget-counter">Total Budget:</div></h2>
-    <h4><div id="total-spent-counter">Spent: 0/0</div></h4>
-    <div id="budget-bar">
-      <div id="entertainment"></div>
-      <div id="food"></div>
-      <div id="clothing"></div>
-      <div id="bills"></div>
-    </div>
+    <h4><div id="total-spent-counter">Spent: </div></h4>
 
     <div class="add-item-container">
       <h3>Add Spend Money</h3>
@@ -42,14 +36,14 @@
       <input type="text" id="item-price" placeholder="$ Price"</input>
       <div class="dropdown">
         <select id="category-dropdown">
-          <option value="cat1">Clothing</option>
-          <option value="cat2">Entertainment</option>
-          <option value="cat3">Bills</option>
-          <option value="cat4">Food</option>
+          <option value="clothing">Clothing</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="bills">Bills</option>
+          <option value="food">Food</option>
         </select>
       </div>
       <!-- TEMP -->
-      <button id="item-button" onclick="checkDropdown()">Add Item</button>
+      <button id="item-button" onclick="addItems()">Add Item</button>
     </div>
 
 

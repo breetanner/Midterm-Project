@@ -1,10 +1,10 @@
-// debugger;
-
 var budget;
 var category;
 var categoryName;
-var totalSpent = 0; // probably dont need this
+var totalSpent = 0;
 // var userBudgetInput;
+
+var cat1 = new Category("clothing");
 
 window.addEventListener("load", () => {
   document.getElementById("modal").style.display = "flex";
@@ -25,51 +25,58 @@ function createBudget() {
     return userBudgetInput;
 }
 
-function addCategories(categoryName) {
-  categoryName = "Clothing";
-  const cat1 = budget.addCategory(categoryName);
-  categoryName = "Entertainment";
-  const cat2 = budget.addCategory(categoryName);
-  categoryName = "Bills";
-  const cat3 = budget.addCategory(categoryName);
-  categoryName = "Food";
-  const cat4 = budget.addCategory(categoryName);
-  return budget;
+function addCategories() {
+  budget.addCategory("Clothing");
+  budget.addCategory("Entertainment");
+  budget.addCategory("Bills");
+  budget.addCategory("Food");
 }
 
 function checkDropdown() {
-  var catInput = document.getElementById('category-dropdown').value;
-  if (catInput === 'cat1') {
-    budget.categories[0].addItem();
-  } else if (catInput === 'cat2') {
-    budget.categories[1].addItem();
-  } else if (catInput === 'cat3') {
-    budget.categories[2].addItem();
-  } else if (catInput === 'cat4') {
-    budget.categories[3].addItem();
+  const catInput = document.getElementById('category-dropdown').value;
+  if (catInput === 'clothing') {
+    return budget.categories[0];
+  } else if (catInput === 'entertainment') {
+    return budget.categories[1];
+  } else if (catInput === 'bills') {
+    return budget.categories[2];
+  } else if (catInput === 'food') {
+    return budget.categories[3];
   } else {
     console.log("Please select a category.") // make this a notification
   }
 }
 
+function addItems() {
+  var itemDesc = document.getElementById('item-description').value;
+  var itemPrice = parseFloat(document.getElementById('item-price').value);
+  var category = checkDropdown();
+  category.addItem(itemDesc, itemPrice);
+  spentUpdate();
+  updateCategorySlider();
+}
+
+function spentUpdate() {
+  document.getElementById("total-spent-counter").innerText = "Spent: " + budget.total() + " / " + budget.totalBudget;
+}
 
 function addToCategory(catInput) {
   var catInput = document.getElementById('category-dropdown').value;
   var itemDesc = document.getElementById('item-description').value;
   var itemPrice = document.getElementById('item-price').value;
   var itemDiv = document.createElement("div");
-  if (catInput === 'cat1') {
+  if (catInput === 'clothing') {
     itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
-    document.getElementById("cat1").appendChild(itemDiv);
-  } else if (catInput === 'cat2') {
+    document.getElementById("clothing").appendChild(itemDiv);
+  } else if (catInput === 'entertainment') {
     itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
-    document.getElementById("cat2").appendChild(itemDiv);
-  } else if (catInput === 'cat3') {
+    document.getElementById("entertainment").appendChild(itemDiv);
+  } else if (catInput === 'bills') {
     itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
-    document.getElementById("cat3").appendChild(itemDiv);
-  } else if (catInput === 'cat4') {
+    document.getElementById("bills").appendChild(itemDiv);
+  } else if (catInput === 'food') {
     itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
-    document.getElementById("cat4").appendChild(itemDiv);
+    document.getElementById("food").appendChild(itemDiv);
   } else {
     console.log("ERROR")
   }
