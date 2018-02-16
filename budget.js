@@ -46,10 +46,6 @@ class Budget {
 
   updateCategorySlider() {
     this.style.width = ((this.total()/this.totalBudget)/.01) + "%";
-  }
-
-  foodPercent() {
-    return (250/this.totalBudget)/.01;
 
   }
 
