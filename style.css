@@ -34,7 +34,7 @@
     color: #F4F4F4;
 }
 
-#entertainment {
+#entertainment-slider {
   width: 0;
   background-color: #2D45FF;
   border-top-left-radius: 10px;
@@ -42,17 +42,17 @@
   /* border: 1px solid black; */
 }
 
-#food {
+#food-slider {
   width: 0;
   background-color: #FF15FD;
 }
 
-#clothing {
+#clothing-slider {
   width: 0;
   background-color: #53DDFF;
 }
 
-#bills {
+#bills-slider {
   width: 0;
   background-color: #F6D073;
   border-top-right-radius: 10px;
