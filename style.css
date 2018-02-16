@@ -6,20 +6,8 @@
 }
 
 .total {
-    display: flex;
-    justify-content: center;
-}
-
-#budget-bar {
-    margin: 0 auto;
-    display: flex;
-    justify-content: left;
-    height: 20px;
-    width: 300px;
-	background-color: grey;
-    border-radius: 10px;
-    padding: 0px;
-	z-index: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .add-element {
@@ -34,33 +22,6 @@
     color: #F4F4F4;
 }
 
-#entertainment {
-  width: 0;
-  background-color: #2D45FF;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  /* border: 1px solid black; */
-}
-
-#food {
-  width: 0;
-  background-color: #FF15FD;
-}
-
-#clothing {
-  width: 0;
-  background-color: #53DDFF;
-}
-
-#bills {
-  width: 0;
-  background-color: #F6D073;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  /* border: 1px solid black; */
-}
-
-/* Bree Style Start */
 
 body {
   margin: 0px;
@@ -90,15 +51,11 @@ h3 {
 h4 {
   font-family: sans-serif;
   font-weight: normal;
-  text-align: left;
+  text-align: right;
   color: #9D9D9D;
 }
 
 p {
-  font-family: sans-serif;
-  font-weight: lighter;
-  color: #9D9D9D;
-  font-size: 15px;
 }
 
 header {
@@ -107,7 +64,7 @@ header {
   /* may have to change to space-between with menu */
   align-items: center;
   background-color: #79F463;
-  margin: 0px;
+  margin: 0 auto;
   padding: 15px;
   height: 40px;
 }
@@ -116,13 +73,10 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: right; */
+  justify-content: center;
+  align-items: right;
   padding-right: 25px;
   padding-left: 25px;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
 }
 
 .add-item-container {
@@ -161,6 +115,13 @@ button {
   font-weight: 600;
 }
 
+#cat1 {
+  width: 200px;
+  height: 25px;
+  border: 1px solid black;
+
+}
+
 .dropdown {
   margin: 10px 0px;
 }
@@ -168,18 +129,12 @@ button {
 .category-dropdown {
 }
 
-#categories-container {
-  margin-top: 20px;
+.categories-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
-  /* border: 1px solid #A3A3A3; */
-  background-color: #FAFAFA;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 15px;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 
 /* make this so that its centered */
@@ -194,19 +149,6 @@ button {
   padding: 20px;
 }
 
-/* .modal {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-center the modal
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: rgba(0, 0, 0, 0.3);
-} */
-
 #budget-modal {
   display: none;
   bottom: 0px;
@@ -214,20 +156,4 @@ background-color: rgba(0, 0, 0, 0.3);
 
 #add-category {
   display: block;
-}
-
-#cat1 {
-}
-
-#categories-container h3 {
-  /* display: block; */
-  color: #79F463;
-  text-align: center;
-}
-
-#categories-container h4 {
-  padding: 5px;
-  color: #A3A3A3;
-  width: auto;
-  border-bottom: 1px solid #A3A3A3;
 }
