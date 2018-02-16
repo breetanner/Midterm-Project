@@ -83,8 +83,8 @@ function addToCategory(catInput) {
 }
 
 
-updateCategorySlider() {
-  var budgetBar = document.getElementById("budget-bar";)
+function updateCategorySlider() {
+  var budgetBar = document.getElementById("budget-bar");
   budgetBar.style.width = ((totaSpent/budget.totalBudget)/.01) + "%";
 
 }
