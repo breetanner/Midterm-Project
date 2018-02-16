@@ -43,23 +43,11 @@ function checkDropdown() {
     return budget.categories[2];
   } else if (catInput === 'food') {
     return budget.categories[3];
-=======
-  var catInput = document.getElementById('category-dropdown').value;
-  if (catInput === 'cat1') {
-    budget.categories[0].addItem();
-  } else if (catInput === 'cat2') {
-    budget.categories[1].addItem();
-  } else if (catInput === 'cat3') {
-    budget.categories[2].addItem();
-  } else if (catInput === 'cat4') {
-    budget.categories[3].addItem();
->>>>>>> bd57fd09a0b2547cf95744451da61962b70e4325
   } else {
     console.log("Please select a category.") // make this a notification
   }
 }
 
-<<<<<<< HEAD
 function addItems() {
   var itemDesc = document.getElementById('item-description').value;
   var itemPrice = parseFloat(document.getElementById('item-price').value);
@@ -120,4 +108,4 @@ function addToCategory(catInput) {
 //     //Now use appendChild and add it to the list!
 //     document.getElementById("list").appendChild(li);
 // }
->>>>>>> bd57fd09a0b2547cf95744451da61962b70e4325
+
