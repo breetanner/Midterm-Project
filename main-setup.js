@@ -7,6 +7,7 @@ var totalSpent = 0; // probably dont need this
 // var userBudgetInput;
 
 window.addEventListener("load", () => {
+  document.getElementById("modal").style.display = "flex";
   document.getElementById("budget-modal").style.display = "block";
   document.getElementById("budget-button").addEventListener("click", () => {
   createBudget();
@@ -19,6 +20,7 @@ function createBudget() {
     document.getElementById("budget-counter").innerText = "Total Budget: $" + userBudgetInput;
     document.getElementById("total-spent-counter").innerText = "Spent: " + totalSpent + " / " + userBudgetInput; // what if the user puts in a $?
     document.getElementById("budget-modal").style.display = "none";
+    document.getElementById("modal").style.display = "none";
     addCategories();
     return userBudgetInput;
 }
@@ -71,29 +73,4 @@ function addToCategory(catInput) {
   } else {
     console.log("ERROR")
   }
-
-  // itemDiv.innerHTML = "<p>" + itemDesc + " $" + itemPrice + "</p>" + "<hr>";
-  // document.getElementById("cat1").appendChild(itemDiv);
 }
-
-// line.innerHTML = "<strong>" + name + ": </strong>"
-
-// var li = document.createElement("li")
-
-// Otherwise use these
-// var itemDesc = document.getElementById('item-description').value;
-// var itemPrice = document.getElementById('item-price').value;
-
-// REFERENCES
-
-// //Defining a listener for our button, specifically, an onclick handler
-// document.getElementById("add").onclick = function() {
-//     //First things first, we need our text:
-//     var text = document.getElementById("idea").value; //.value gets input values
-//
-//     //Now construct a quick list element
-//     var li = "<li>" + text + "</li>";
-//
-//     //Now use appendChild and add it to the list!
-//     document.getElementById("list").appendChild(li);
-// }

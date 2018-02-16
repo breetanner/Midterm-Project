@@ -17,7 +17,8 @@
   </header>
 
 <!-- working on making this be hidden and shown -->
-  <div class="modal" id="budget-modal">
+  <div id="modal">
+    <div id="budget-modal">
       <label><h2>Budget:</h2>
         <input type="text" id="budget-input">
         <button id="budget-button">Add Budget</button>
@@ -52,20 +53,22 @@
     </div>
 
 
-    <div class id="categories-container">
-      <h3>Categories</h3>
-        <div id="cat1">
+    <div id="categories-container">
+      <div class="categories">
+        <h3>Categories</h3>
+        <div class="category" id="cat1">
           <h4>Clothing</h4>
         </div>
-        <div id="cat2">
+        <div class="category" id="cat2">
           <h4>Entertainment</h4>
         </div>
-        <div id="cat3">
+        <div class="category" id="cat3">
           <h4>Bills</h4>
         </div>
-        <div id="cat4">
+        <div class="category" id="cat4">
           <h4>Food</h4>
         </div>
+      </div>
     </div>
 
       <!-- EXTRA User Category Input -->

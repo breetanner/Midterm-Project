@@ -49,8 +49,6 @@ class Budget {
     this.categories = this.categories
   }
 
-
-
   updateCategorySlider() {
     document.getElementById("entertainment").style.width = (this.entertainmentPercent()).toString() + "%";
     document.getElementById("food").style.width = (this.foodPercent()).toString() + "%";
