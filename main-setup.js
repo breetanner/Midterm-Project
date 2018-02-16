@@ -53,7 +53,7 @@ function addItems() {
   var category = checkDropdown();
   category.addItem(itemDesc, itemPrice);
   spentUpdate();
-  updateCategorySlider();
+  // updateCategorySlider();
 }
 
 function spentUpdate() {
